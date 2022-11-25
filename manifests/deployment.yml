@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lalitpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lalitpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lalitpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lalitpipelinesjavascriptdocker 
+          image: stgacr.azurecr.io/lalitpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
